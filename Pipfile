@@ -7,6 +7,7 @@ name = "pypi"
 django = "==3.2"
 pillow = "*"
 social-auth-app-django = "*"
+gunicorn = "*"
 
 [dev-packages]
 
