@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Регистрация{% endblock %}
+{% block content %}
+<div class="login">
+    <h3>Регистрация на сайте</h3>
+    <form action="." method="post">
+        <div class="inputForm">
+            {{ user_form.username}}
+        </div>
+        <div class="inputForm">
+            {{ user_form.first_name }}
+        </div>
+        <div class="inputForm">
+            {{ user_form.email }}
+        </div>
+        <div class="inputForm">
+            {{ user_form.password }}
+        </div>
+        <div class="inputForm">
+            {{ user_form.password2 }}
+        </div>
+        {% csrf_token %}
+        <p><input class="btn btn-dark btn-lg mt-2" type="submit" value="Создать аккаунт"></p>
+    </form>
+</div>
+{% endblock %}

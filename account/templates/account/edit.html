@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Редактирование профиля{% endblock %}
+{% block content %}
+<div class="login">
+    <h1>Edit your account</h1>
+    <p>You can edit your account using the following form:</p>
+    <form action="." method="post" enctype="multipart/form-data">
+        {# {{ user_form.as_p }} #}
+
+        <div class="inputForm">
+            {{ user_form.first_name }}
+        </div>
+        <div class="inputForm">
+            {{ user_form.last_name }}
+        </div>
+        <div class="inputForm">
+            {{ user_form.email }}
+        </div>
+        <div class="inputForm">
+            {{ profile_form.date_of_birth }}
+        </div>
+        <div class="inputForm">
+            {{ profile_form.photo }}
+        </div>
+        {# {{ profile_form.as_p }} #}
+        {% csrf_token %}
+
+        <p><input class="btn btn-dark btn-lg mt-2" type="submit" value="Сохранить"></p>
+    </form>
+</div>
+
+{% endblock %}

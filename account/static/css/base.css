@@ -1,0 +1,70 @@
+.login, .logout, h1{
+    text-align: center;
+    padding-top: 40px;
+}
+.login p {
+
+}
+.myfield {
+    border:1px solid #ccc;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    height:40px;
+    width:300px;
+    margin: 0;
+    padding: 0;
+    margin: 10px 10px 10px 0;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.myfieldlow {
+    border:1px solid #ccc;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    height:40px;
+    width:200px;
+    margin: 0;
+    padding: 0;
+    margin: 10px 10px 10px 0;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.myfieldhight {
+    border:1px solid #ccc;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    height:80px;
+    width:400px;
+    margin: 0;
+    padding: 0;
+    margin: 10px 10px 10px 0;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.test div{
+    width: 200px;
+    height: 20px;
+    border:2px solid yellow;
+}
+.google ul {
+
+}
+.inputForm input {
+    text-indent: 10px;
+    /* border:1px solid #ccc;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    height:40px;
+    width:300px;
+    margin: 0;
+    padding: 0;
+    margin: 10px 10px 10px 0; */
+}
+
+.navbar-nav p{
+    color: #ccc;
+}

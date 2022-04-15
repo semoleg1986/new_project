@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Авторизация{% endblock title %}
+
+{% block content %}
+<div class="login">
+    <h3>Вход в личный кабинет</h3>
+        <form action="." method="post">
+            <div class="inputForm">
+                {{ form.username }}
+            </div>
+            <div class="inputForm">
+                {{ form.password }}
+            </div>
+            {% csrf_token %}
+
+            {# <i class="bi bi-arrow-right-circle"></i> #}
+            <p><input class="btn btn-dark btn-lg mt-2" type="submit" value="Войти"></p>
+        </form>
+</div>
+
+{% endblock content %}

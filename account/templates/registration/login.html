@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Авторизация{% endblock title %}
+
+{% block content %}
+    <div class="login">
+        <h3>Вход в личный кабинет</h3>
+        {% if form.errors %}
+            <p>Имя пользователя или пароль неверен. Повторите попытку снова.</p>
+        {% else %}
+        {% endif %}
+        <form class="loginform" action="." method="post">
+            <div class="inputForm">
+                {{ form.username }}
+            </div>
+            <div class="inputForm">
+                {{ form.password }}
+            </div>
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}" />
+            <p><input class="btn btn-dark btn-lg mt-2" type="submit" value="Войти"></p>
+        </form>
+        <p><a href="{% url "password_reset" %}">Забыли пароль?</a></p>
+        <p><a href="{% url "register" %}">Регистрация</a></p>
+        <ul class="mx-auto" style="width: 300px;">
+            <li class="google" style="border: 2px solid red; width: 200px; background: red; list-style-type: none;">
+                <a style="color:white; text-decoration:none;" class="google" href="{% url "social:begin" "google-oauth2" %}">Login with Google </a>
+            </li>
+            <li class="google" style="border: 2px solid lightblue; width: 200px; background: blue; list-style-type: none;">
+                <a style="color:white; text-decoration:none;" class="google" href="{% url 'social:begin' 'vk-oauth2' %}">VK</a>
+            </li>
+        </ul>
+
+    </div>
+{% endblock content %}

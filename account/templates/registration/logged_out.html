@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Деавторизация{% endblock %}
+
+{% block content %}
+<div class="logout">
+    <h3>Выход</h3>
+    <p>Вы успешно вышли из личного кабинета. Вы можете <a href="{% url "login" %}">войти</a> в свой личный кабинет снова.</p>
+</div>
+{% endblock %}
